@@ -59,15 +59,15 @@ const employees = [
       }
     }
     else if (employee.reviewRating === 4) {
-      bonus += (6/100) * employee.annualSalary;
+      bonusPercentage += 6;
       if (employee.employeeNumber.length === 4) {
-        bonus += (5/100) * employee.annualSalary;
+        bonusPercentage += 5;
       }
     }
     else if (employee.reviewRating === 5) {
-      bonus += (10/100) * employee.annualSalary;
+      bonusPercentage += 10;
       if (employee.employeeNumber.length === 4) {
-        bonus += (5/100) * employee.annualSalary;
+        bonusPercentage += 5;
       }
     }
   } // end for of loop
@@ -96,9 +96,9 @@ else if (employee.review === 3) {
 
 function employeeEval (employee) {
   const employeeName = employee.name;
-  const bonusPercentage = ;                                                                   // running total of the percent employee gets i.e. 9% 
+  const bonusPercentage = bonusPercentage;                                                                   // running total of the percent employee gets i.e. 9% 
   const totalCompensation = (bonusPercentage)/100 * employee.employeeSalary;                  // annualSalary plus bonus 
-  const totalBonus = ;                                                                        // percentage multiplied by salary
+  const totalBonus = totalBonus;                                                                        // percentage multiplied by salary
 
   const newEmployeeObject = {
     employeeName: employeeName,
