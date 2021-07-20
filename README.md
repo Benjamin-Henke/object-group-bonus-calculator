@@ -2,7 +2,7 @@
 
 You are going to write a single JavaScript file to automatically calculate employee bonus for a company.
 
-## Objectives
+## Objectives 
 
 - Practice Read, Write, Speak, Teach skills
 - Solidify JavaScript knowledge
