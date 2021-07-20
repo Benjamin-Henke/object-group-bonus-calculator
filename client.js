@@ -40,24 +40,22 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
-console.log( employees );
+// console.log( employees );
 
-for (employee of employees) {
-  // employeeEval(object);
-  // console.log(...);
-  
-} // end of for loop
     
-function employeeEval (employees) {
-  let bonus = 0;
+
+ 
+  // This for loop find the base percentage value
   for (employee of employees) {
+    bonusPercentage = 0;
+
     if (employee.reviewRating <= 2) {
       console.log('No Bonus.');
     }
     else if (employee.reviewRating === 3) {
-      bonus += (4/100) * employee.annualSalary;
+      bonusPercentage += 4;
       if (employee.employeeNumber.length === 4) {
-        bonus += (5/100) * employee.annualSalary;
+        bonusPercentage += 5;
       }
     }
     else if (employee.reviewRating === 4) {
@@ -73,6 +71,50 @@ function employeeEval (employees) {
       }
     }
   } // end for of loop
+
+// console.log(employeeEval(employees));
+
+// function greetEmployee(employee) {
+//   const howToGreet = 'Hello you lovely person named ' + employee.name
+//   const soManyDollars = 'This person makes ' + employee.annualSalary + ' dollars'
+  
+//   const newEmployeeObject = {
+//     howToGreet: howToGreet,
+//     dollars: soManyDollars
+//   }
+
+//   return newEmployeeObject
+// }
+
+if (employee.review <= 2) {
+  console.log('No Bonus');
+}
+else if (employee.review === 3) {
+  // employee gets 4%
+}
+
+
+function employeeEval (employee) {
+  const employeeName = employee.name;
+  const bonusPercentage = ;                                                                   // running total of the percent employee gets i.e. 9% 
+  const totalCompensation = (bonusPercentage)/100 * employee.employeeSalary;                  // annualSalary plus bonus 
+  const totalBonus = ;                                                                        // percentage multiplied by salary
+
+  const newEmployeeObject = {
+    employeeName: employeeName,
+    bonusPercentage: bonusPercentage,
+    totalCompensation: totalCompensation,
+    totalBonus: totalBonus
+  }
+  return newEmployeeObject;
 } // end employeeEval
 
-console.log(employeeEval(employees));
+
+
+for (employee of employees) {
+  // call the function
+  employeeEval(employee);
+  // return the object
+  console.log();
+  
+}
